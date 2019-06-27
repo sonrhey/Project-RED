@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+   
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="js/register.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--font awesome-->
+     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <title>Project RED</title>
+</head>
+<body class="body">
+<div class="loader1" id="loader"></div>
+ <div class="header-bg navbar-fixed-top">
+    <div class="container">
+        <div class="media">
+            <div class = "media-right">
+                <img src="images/register-icon.png" width="45" height="44">
+            </div>
+            <div class="media-body">
+                 <p class = "login-header ">Register Member</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+        <div class = "form-body">
+            <div class="form-group error" id="form-group-1">
+            <label for="username" class="form-labels">Name:</label>
+                <div class="input-group ">
+                    <span class="input-group-addon"><img src="images/username-icon.png" height="32" alt="Username icon"/></span>
+                    <input type="text" class="form-control input-lg"  name="name" placeholder="Enter name (spaces is required)" id="name-input">
+                    <span id="error"></span> 
+                </div>
+            </div><!--form group 1 -->
+            <div class="form-group">
+                <div class="row">   
+                    <div class="col-xs-6">   
+                     <label for="password" class="form-labels">Age:</label>
+                       <select class="form-control input-lg age" id="age">
+                       <option selected="true" disabled="disabled" >Select Age</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="password" class="form-labels">Gender:</label>
+                       <select class="form-control input-lg " id="gender">
+                       <option selected="true" disabled="disabled" >Select Gender</option>
+                          <option value ="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div><!--form group 2-->
+            <div class="form-group" >
+                       <label for="password" class="form-labels">Country:</label>
+                       <div class="input-group">
+                       <span class="input-group-addon"><img src="images/location-icon.png" height="32" alt="Username icon"/></span>
+                       <select class="form-control input-lg" id="country" >
+                       <option selected="true" disabled="disabled" selected="selected">Select Country</option>
+                        </select>
+                        </div>
+            </div><!--form group 3 -->
+             <div class="form-group">
+                     <label for="password" class="form-labels">City / Municipality /State:</label>
+                     <div class="input-group">
+                     <span class="input-group-addon"><img src="images/location-icon.png" height="32" alt="Username icon"/></span>
+                       <select class="form-control input-lg" id="regions" >
+                       <option selected="true" disabled="disabled" >Select State</option>
+                        </select>
+                    </div>
+            </div><!--form group 4-->
+            <div class="form-group " id="form-group-2">
+                <label for="username" class="form-labels">Cellphone Number:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="images/contact-icon.png" height="32" alt="Username icon"/></span>
+                    <input type="number" class="form-control input-lg" name="cellphone-number"  placeholder="Enter mobile number" id="cellphone-number"/><span id="error-1"></span>
+                </div>  
+            </div><!--end form group 2.1-->
+            <div class="form-group" id="form-group-3">
+                <label for="username" class="form-labels">Email Address:</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="span"><img src="images/email-icon.png" height="32" alt="Username icon"/></span>
+                    <input type="email" class="form-control input-lg" name="username"  placeholder="Enter email address" id="email-address"/><span id="error-2"></span>
+                </div>  
+                <p class="err-mess">Email already Used!</p>
+            </div><!--end form group 6-->
+             <div class="form-group" id="form-group-4">
+              <label for="password" class="form-labels">Password:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="images/pass-icon.png" height="32" alt="Password icon"/></span>
+                    <input type="password" class="form-control input-lg" name="password" placeholder="Enter password" id="password"/><span id="error-3"></span>   
+                </div>    
+            </div><!--form group 7-->
+             <div class="form-group" id="form-group-5">
+            <label for="password" class="form-labels">Confirm Password:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="images/pass-icon.png" height="32" alt="Password icon"/></span>
+                    <input type="password" class="form-control input-lg" name="password" placeholder="Confirm password" id="confirm-password"/><span id="error-4"></span>   
+                </div>    
+            </div><!--form group 8-->
+
+            <div class="form-group condition-use">
+              <input type="checkbox" name="chk[]" id="read"> I have read and understand the <a data-toggle="modal" data-target="#myModal11" />Terms of Use</a> and the <a data-toggle="modal" data-target="#myModal12">Privacy Policy</a> of the app.
+            </div>
+            <br>
+            <div class="form-group">
+                        <button type="button" id="proceed" class="btn btn-primary btn-lg btn-block"/>Proceed</button>
+        
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                             <div class="modal-dialog">
+            
+              <!-- Modal content-->
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal"><span class="close-button">&times;</span></button>
+                                  <h4 class="modal-title" id="header-title">Blood type</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                         <div class="container blood-margin">
+                                         <h4 class="label-blood-type text-left">Blood Type:</h4>
+                                         <div class="input-group">
+                                         <span class="input-group-addon"><img src="images/blood-drop-icon.png" height="20" alt="Username icon"/></span>
+                                        
+                                                <select class="form-control input-lg center-block" id="blood-type">
+                                                <option selected="true" disabled="disabled" >Select Blood type</option>
+                                                  <option value= "O+"> O+</option>
+                                                  <option value= "O-"> O-</option>
+                                                  <option value= "A+"> A+</option>
+                                                  <option value= "A-"> A-</option>
+                                                  <option value= "B+"> B+</option>
+                                                  <option value= "B-"> B-</option>
+                                                  <option value= "AB+"> AB+</option>
+                                                  <option value= "AB-"> AB-</option>
+                                                  <option value= " - ">None</option>
+                                                </select>
+                                        </div><!--end input group-->
+                                        </div><!--end container-->
+                                    </div><!--form group 5-->
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary btn-lg btn-block" id="continue-reg">Continue Registration</button>
+                                </div>
+                                </div><!--end modal-->
+              
+                             </div>
+                        </div><!--end modal-->
+
+
+                            <!--terms of use-->
+
+    <div class="modal fade" id="myModal11" role="dialog">
+    <div class="modal-dialog pos">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header bg">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h5 class="modal-title pred-title"><p class="terms-title"><b>PROJECT RED</b> TERMS OF USE</p></h5>
+        </div>
+        <div class="modal-body max-heigt">
+        <p><b>PLEASE READ THIS DOCUMENT CAREFULLY.</b> Project RED (”we,” or ”us”) facilitates a mobile app to its users to post request seeking for blood  donors using this app, to donate blood in an emergency and to keep tracking blood donated by himself/herself. By registering as an app user, you accept these Terms & Conditions (”Agreement”), which forms a binding agreement between you and Project RED. If you do not wish to be bound by this Agreement, do not use Project RED Service.</p>
+
+        <p>
+        <b>1. Who may use the service?</b>
+        AGE REQUIREMENT: You must be at least 18 years old to use Project RED’s Service.</p>
+
+        <p>
+        <b>2. Privacy</b>
+        Your privacy rights are set forth in our Privacy Policy, which forms a part of this Agreement. Please review the Privacy Policy to learn about:
+        •   What information we may collect about you;
+        •   What we use that information for; and
+        •   With whom we share that information.</p>
+
+        <p>
+        <b>3. Membership</b>
+        REGISTRATION: To use Project RED, you must register as a member along with your full name, age, gender, country, city / municipality / state, valid email address, mobile number and your blood type. You must provide complete and accurate registration information to Project RED. To register as a member into the app is absolutely.
+        PAYMENT: Project RED is FREE, whatever payment asked by third party blood donor, is between you and third party.
+        LIABILITY: All blood donors are third party and is no way connected to Project RED by employment or affiliation. Project RED including founder and people behind the service is not liable or cannot be held accountable for any problems that emerged between user and third party blood donor.
+        ACCOUNT SECURITY: You are responsible for all activity that occurs under your account, including any activity by unauthorized users. If you become aware of an unauthorized access to your account, you must change your password and notify us immediately.</p>
+
+        <p>
+        <b>4. Terms and Termination</b>
+        TERMS: This Agreement begins on the date you register for an account with Project RED and continues as long as you have an account with us. Project RED reserves the right to modify or discontinue the Project RED App with or without prior notice. </p>
+
+        <p><b>TERMINATION FOR BREACH:</b> Project RED may suspend, disable, or delete your account (or any part thereof) if Project RED determines that you have violated any provision of this Agreement or that your conduct or content would tend to damage reputation and goodwill of Project RED. 
+        EFFECT OF TERMINATION: Upon termination, all licenses granted by Project RED to you will be terminated.
+        This Agreement constitutes the entire understanding between Project RED and you concerning the subject matter hereof and supersedes all prior agreements and understandings regarding the same.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!--privacy policy-->
+
+  <div class="modal fade" id="myModal12" role="dialog">
+    <div class="modal-dialog pos">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header bg">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h5 class="modal-title pred-title"><p class="terms-title"><b>PROJECT RED</b> Privacy Policy</p></h5>
+        </div>
+        <div class="modal-body max-heigt">
+          <p><b>Project RED</b> respects the privacy of its users and has developed this Privacy Policy to demonstrate its commitment to protecting your privacy. These privacy policies (the "Privacy Policy") are intended to describe for you, as an individual who is a user of mobile app and services offered by Project RED, the information we collect, how that information may be used, with whom it may be shared, and your choices about such uses and disclosures.
+            We encourage you to read this Privacy Policy carefully when using this app. By using this app, you are accepting the practices described in this Privacy Policy.</p>
+
+            <p><b>Information We Collect About You</b></p>
+            <p>We may collect personal information that can identify you, such as your name, email address, contact details, and other information also that does identify you but required for the app like your blood type. When you provide personal information through our app, the information may be sent to our servers.
+            Information you provide: We may collect and store any personal information you enter on our app. This includes identifying information, such as your name, address, email address, mobile and blood type; We also may request information your gender and age, and other demographic information.
+            Information collected automatically: We automatically collect your current location to show nearby hospitals and/or clinics.</p>
+
+            <p><b>How We Use the Information We Collect</b></p>
+            <p>We may use information that we collect about you to:</p>
+            <ul>
+            <li>•   deliver the information to show in the app;</li>
+            <li>•   perform research and analysis about blood donors, requesters, blood donations etc;</li>
+            <li>•   communicate with you by e-mail, mobile devices;</li>
+            <li>•   to facilitate your contact details to blood requester for sending message or calling you directly;</li>
+            <li>•   enforce our terms and conditions;</li>
+            </ul>
+
+            <p><b>With Whom We Share Your Information</b></p>
+            <p>We want you to understand when and with whom we may share personal or other information we have collected about you or your activities on our app or while using our services.</p>
+            <p>Personal information: We do not share your personal information with others except as indicated below or when we inform you. We may share personal information with:</p>
+            <ul>
+            <li>•   Authorized service providers: We may share your personal information with Philippine Red Cross. Philippine Red Cross may have access to personal information needed to perform their functions but are not permitted to share or use such information for any other purposes.</li>
+            <li>•   Other Situations: We also may disclose your information:</li>
+            <p>o    In response to a subpoena or similar investigative demand, a court order, or a request for cooperation from the law enforcement or other government agency; to establish or exercise our legal rights; to defend against legal claims; or as otherwise required by law. In such cases, we may raise or waive any legal objection or right available to us, in our sole discretion.</p>
+            <p>o    When we believe disclosure is appropriate in connection with efforts to investigate, prevent, report or take other action regarding illegal activity, suspected fraud or other wrongdoing; to protect and defend the rights, property or safety of our company, our users, our employees, or others; to comply with applicable law or cooperate with law enforcement; or to enforce our app terms and conditions or other agreements or policies.
+            Aggregated and non-personal information: We may share aggregated and non-personal information we collect under any of the above circumstances.</p>
+            </ul>
+
+            <p><b>How We Protect Your Personal Information</b></p>
+            <p>We take appropriate security measures (including physical, electronic and procedural measures) to help safeguard your personal information from unauthorized access and disclosure. For example, only authorized employees are permitted to access personal information, and they may do so only for permitted functions only. In addition, we use encryption in the transmission of your sensitive personal information between your system and ours, and we use firewalls to help prevent unauthorized persons from gaining access to your personal information.
+            We want you to feel confident using our app. However, no system can be completely secure. Therefore, although we take steps to secure your information, we do not promise, and you should not expect, that your personal information, searches, or other communications will always remain secure. Users should also take care with how they handle and disclose their personal information and should avoid sending personal information through insecure email.</p>
+
+            <p><b>Children’s Privacy</b></p>
+
+            <p>This app is for those person only who is eligible for donating blood i.e. anyone with age of 18 or above it can donate the app and use this app for tracking his/her donation records. While we do not knowingly collect personal information from children under the age of 18.</p>
+            <p><b>Changes to This Privacy Policy</b></p>
+
+            <p>We will occasionally update this Privacy Policy to reflect changes in our practices and services. When we post changes to this Privacy Policy, we will revise the "Last Updated" date at the top of this Privacy Policy. We recommend that you check our app from time to time to inform yourself of any changes in this Privacy Policy or any of our other policies. We might inform our app users by sending an information message in the app itself also.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+            </div><!--end form group 3-->
+    
+
+
+        </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

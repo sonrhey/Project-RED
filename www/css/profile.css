@@ -1,0 +1,311 @@
+body{
+	font-family: arial;
+}
+
+.profile-wrapper{
+	margin-top: 25px;
+	margin-left: 14px;
+}
+
+.profile-details{
+	text-transform: capitalize;
+	margin-left: 7px;
+}
+
+#profile-email_address, #profile-age{
+	text-transform: none;
+}
+
+.media-left.icon-pos{
+	padding-right: 20px;
+}
+
+.media-left.icon-pos2{
+	padding-right: 23px;
+}
+
+.media-left.icon-pos3,.media-left.icon-pos4{
+	padding-right: 31px;
+}
+
+.media-left.icon-pos5{
+	padding-right: 17px;
+}
+
+.media-left.icon-pos6{
+	padding-right: 29px;
+}
+
+.btn-edit{
+	padding-bottom: 20px;
+	margin-bottom: 20%;
+}
+
+.top-line{
+	border: 1.2px solid #999999;
+}
+
+.fa-pos{
+	margin: 8px 0;
+	color: #ba1432;
+}
+
+.media-body.user-name{
+	text-transform: capitalize;
+	overflow: visible;
+	margin-left: -4px;
+}
+.user-name{
+	text-transform: capitalize;
+
+}
+
+.name-color{
+	color: #a5a5a5;
+}
+
+#profile-name,
+#profile-age,
+#profile-gender,
+#profile-cell_number,
+#profile-country,
+#profile-city_state,
+#profile-email_address,
+#profile-password
+{
+	color: #a5a5a5;
+	font-weight:bold;
+	font-family: Arial Rounded MT;
+  max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edit-pos{
+	margin: -28px 0;
+	color: #444;
+}
+
+.form-control.text-name{
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	margin-top: -15px;
+}
+
+.form-control.text-name1{
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	margin-top: -15px;
+}
+
+.form-control.text-name:focus,
+.form-control.text-name1:focus,
+select.select-mat:focus
+{
+	border-color:#ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ border-bottom: 1px solid red;
+ border-radius: 0;
+}
+
+.form-control.text-name1[readonly],
+#edit-pass[readonly],
+#profile-country[disabled],
+#profile-city_state[disabled]{
+	background: none;
+}
+
+#profile-age{
+	width: 30px;
+}
+
+.extension{
+	margin: -35px 30px;
+    font-weight: bold;
+    font-family: Arial Rounded MT;
+    color: #a5a5a5;
+    text-transform: lowercase;
+    font-size: 19px;	
+}
+
+.media-body.age-pos {
+    overflow: visible;
+}
+
+.form-group.padding-group {
+    margin-bottom: 200px;
+}
+
+select.select-mat {
+    border: 0;
+    box-shadow: none;
+}
+
+.modal-content.modal-bg{
+	background-color: unset;
+	-webkit-box-shadow: unset;
+	border: 0;
+
+}
+
+
+/* Absolute Center Spinner */
+.loader1 {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loader1:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loader1:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loader1:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader1{
+	display: none;
+}
+
+span#blood-type6 {
+    position: relative;
+    padding: 4px 0;
+    background: rgb(84, 84, 84);
+    text-transform: capitalize;
+    padding-left: 37%;
+    padding-right: 38%;
+}
+
+img#user_profiles,
+img#member-profile {
+    position: relative;
+    border-radius: 50%;
+    -webkit-transform: scaleX(-1) rotate(360deg);
+    transform: scaleX(-1) rotate(360deg);
+}
+
+img#user_profiles1{
+  -webkit-transform: scaleX(-1) rotate(360deg);
+  transform: scaleX(-1) rotate(360deg);
+}
+
+
+#blood-type5 {
+    position: absolute;
+    background: #ff5252;
+    padding: 4px 20px 4px 20px;
+    width: 61px;
+    font-size: 12.7px;
+    text-align: center;
+}

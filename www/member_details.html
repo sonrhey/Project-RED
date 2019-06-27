@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src *  'unsafe-inline'; script-src *  'unsafe-inline'; media-src *">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+      <link rel="stylesheet" type="text/css" href="css/profile.css" />
+     <link rel="stylesheet" type="text/css" href="css/dashboard-1.css" />
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Project RED</title>
+    <script src="js/dashboard.js"></script>
+    <script src="js/member_details.js"></script>
+</head>
+<body class="body">
+
+<div class="loader1" id="loader"></div>
+ <div class="header-bg header-bg1" id="top">
+    <div class="container">
+        <div class="media">
+            <a href="dashboard.html" ><img src="images/logo-small.png" id="imgup"/></a>
+            <div class="wrapper1-burg pull-right message-pos1">
+            <button type="button" class=" navbar-toggle" id="toggle-butt">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-2x"></i>
+            </button>
+            </div>
+
+            <!--navbar collapse-->
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right colls">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="profile.html"><i class="fa fa-user fa-2x"></i>&nbsp; Profile</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="inbox.html"><i class="fa fa-inbox fa-2x"></i>&nbsp; Inbox</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="request_history.html"><i class="fa fa-history fa-2x"></i>&nbsp; History</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="notifications.html"><i class="fa fa-bell-o fa-2x"></i>&nbsp; Notifications</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li id="logout">
+                        <a class="page-scroll"><i class="fa fa-power-off fa-2x"></i>&nbsp; Logout
+                    </li>
+                    <hr class="divider-line1">
+                </ul>
+            </div>
+
+            <!--end navbar collapse-->
+        </div><!--end media-->
+    </div><!--end header container-->
+ </div><!--end header bg-->
+
+<!--header-->
+
+<div class="whole-div">
+ <!--start profile-->
+<div class="container">
+    <div class="profile-wrapper">
+        <div class="media-left move-left-img">
+            <img src="images/samp-image1.png"/ width="70" height="70" id="member-profile" class="image-pos" onerror="this.onerror=null;this.src='images/donate-blood.jpg';">
+            <div class="blood-type-pos">
+            <span class="label label-danger" id ="blood-type5"></span>
+            </div>
+        </div>
+        <div class="media-body user-name">
+            <div class="user-name">
+            <h5 class="name-color">Name:</h5>
+           <h4 id="profile-name"></h4>
+            </div>
+        </div>
+    </div>
+    <hr class="top-line">
+    <div class=" profile-details">
+        <div class="user-age">
+            <div class="media-left icon-pos">
+            <i class="fa fa-hourglass fa-3x fa-pos"></i>
+            </div>
+            <div class="media-body age-pos">
+            <h5 class="name-color">Age:</h5>
+            <input type="text" class="form-control text-name1 input-lg" id="profile-age" readonly="readonly" /><h5 class="extension">yrs. old</h5>
+            </div>
+        </div>
+        <hr>
+        <div class="user-gender">
+            <div class="media-left icon-pos1">
+            <i class="fa fa-venus-mars fa-3x fa-pos"></i>  
+            </div>
+            <div class="media-body">
+            <h5 class="name-color">Gender:</h5>
+            <input type="text" class="form-control text-name1 input-lg" id="profile-gender" readonly="readonly"/>
+            </div>
+        </div>
+        <hr>
+        <div class="user-country">
+            <div class="media-left icon-pos3">
+            <i class="fa fa-map-marker fa-3x fa-pos"></i> 
+            </div>
+            <div class="media-body">
+            <h5 class="name-color">Country:</h5>
+            <input type="text" class="form-control text-name1 input-lg" id="profile-country" readonly="readonly"/>
+            </div>
+        </div>
+        <hr>
+        <div class="user-city_state">
+            <div class="media-left icon-pos4">
+            <i class="fa fa-map-marker fa-3x fa-pos"></i> 
+            </div>
+            <div class="media-body">
+            <h5 class="name-color">City / State:</h5>
+            <input type="text" class="form-control text-name1 input-lg" id="profile-city_state" readonly="readonly"/>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="form-group padding-group">
+    <button type="button" class="btn btn-lg btn-primary btn-block" id="send_message">Send Message</button>
+    <button type="button" id="donate" class="btn btn-lg btn-success btn-block">Donation History</button>
+    </div>
+</div>
+ <!--end profile-->
+ <audio id="my_audio" src="audio/notif.wav"></audio>
+</div>
+
+ <!--footer-->
+ <div class="footer-nav" id="footer-nav">
+ <div class="header-bg navbar-fixed-bottom ">
+    <div class="container ">
+                <div class="row" >
+                    <div class="col-xs-3 profile">
+                        <a href="dashboard.html"><img src="images/home-icon.png" class="center-block"/ ></a>
+                    </div><!--end first col-->
+                    <div class="col-xs-3 list">
+                        <a href="inbox.html"><img src="images/messages-icon.png" class="center-block"/><div id ="badge-id1" class="badge-pos1"></div></a>
+                    </div><!--end first col-->
+                    <div class="col-xs-3 history">
+                        <a href="request_history.html"><img src="images/history-icon.png" class="center-block"/></a>
+                    </div><!--end first col-->
+                    <div class="col-xs-3 bell">
+                        <a href="notifications.html" id="notif"><img src="images/bell-icon.png" class="center-block"/><div id ="badge-id" class="badge-pos "></div></a>
+                    </div><!--end first col-->
+                </div><!--end row-->
+    </div><!--end header container-->
+ </div><!--end header bg-->
+ </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

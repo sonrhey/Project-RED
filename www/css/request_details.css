@@ -1,0 +1,175 @@
+#request_details{
+	margin-top: 10px;
+    margin-bottom: 25%;
+}
+
+.img-position{
+margin-left: -25px;
+margin-top: 20px;
+}
+
+#posted_by{
+    
+	margin: 33px 0;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: gray;
+    font-size: 15px;
+    max-width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hr{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2.5px solid #c0bebf;
+}
+
+.request-details-height{
+	line-height: 1.3em;
+	margin-top: -8px;
+    color: gray;
+	font-size: 15px;
+}
+
+.patients-name{
+    font-size: 17px;
+	text-transform: capitalize;
+	color: gray;
+	font-weight: bold;
+}
+
+.request-note{
+	text-transform: lowercase;
+	line-height: 18px;
+	margin-top: 5px;
+	font-size: 13px;
+	color: gray;
+}
+
+.request-bg{
+	background: black;
+
+}
+
+.blood-type-pos{
+	margin: -65px 46px 0 -14.9px;
+}
+
+#blood-type-request{
+	position: absolute;
+    background: #ff5252;
+    padding: 20px 20px 20px 20px;
+    width: 61px;
+    font-size: 12.7px;
+    text-align: center;
+}
+
+#time-ago{
+    margin-left: 11px;
+	font-size: 9px;
+    font-family: tahoma;
+    font-weight: normal;
+    text-transform: capitalize;
+	margin-top: -28px;
+	position: absolute;
+	color: #999999;
+}
+
+
+.fa-color {
+    color: #004785;
+}
+
+i.fa.fa-user.fa-2x.fa-color {
+    font-size: 24px;
+}
+
+i.fa.fa-calendar.fa-2x.fa-color {
+    font-size: 24px;
+}
+
+h4.suggested_donators{
+	color: gray;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+div#members-area {
+    color: gray;
+    font-family: arial;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+hr.hr1 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2.5px solid #c0bebf;
+}
+
+.message-color {
+    color: #f75959;
+    margin-top: -39px;
+    font-size: 40px;
+}
+
+.suggested-member-name {
+    margin: 10px 10px;
+    max-width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p.patients_description,
+p.hostName {
+    text-transform: none;
+}
+
+img#patients_picture {
+    height: 180px;
+}
+
+center.color {
+    background: #383838;;
+    padding: 10px;
+}
+
+img#user_picture {
+    border-radius: 50%;
+    -webkit-transform: scaleX(-1) rotate(360deg);
+    transform: scaleX(-1) rotate(360deg);
+}
+
+img#users_picture1 {
+    border-radius: 50%;
+    /* height: 3%; */
+}   
+
+.profile-wrapper {
+    margin-top: 0;
+}
+
+.modal-body.max {
+    overflow: auto;
+    height: 300px;
+}
+
+#blood-type5{
+    margin: 50px 6px;
+}
+
+div#myModal13 {
+    top: 6%;
+}
+
+h4#sug {
+    text-transform: none;
+    color: white;
+}

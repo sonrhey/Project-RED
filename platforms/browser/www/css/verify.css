@@ -1,0 +1,55 @@
+body.body {
+    background: #ff4d4d;
+}
+
+p.note {
+    line-height: 1.5em;
+    color: white;
+    text-transform: none;
+    background: rgba(0, 0, 0, 0.52);
+    padding: 15px;
+    text-align: justify;
+    border-radius: 10px;
+    margin-top: 15px;
+    /* font-weight: bold; */
+    font-size: 15px;
+}
+
+p.verif-code {
+    text-transform: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input.form-control.input-lg.verif-inp {
+    text-align: center;
+    width: 50%;
+}
+
+button.btn.btn-primary.btn-lg.verif-button {
+    width: 75%;
+    margin-bottom: -7px;
+    margin-top: 12px;
+}
+
+p.dont-receive {
+    margin-top: 30px;
+    color: white;
+    text-transform: none;
+    /* font-weight: bold; */
+    font-size: 13px;
+}
+
+button.btn.btn-link.resend-code {
+    color: white;
+    margin-top: -10px;
+    text-decoration: underline;
+    /* line-height: 1.7em; */
+    font-weight: bold;
+}
+
+div#wrapper {
+    width: 86%;
+}

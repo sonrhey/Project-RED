@@ -1,0 +1,349 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+
+    backface-visibility: transparent;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+  
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+
+.body {
+
+    backface-visibility: transparent;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+   background:url(../images/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.login-header{
+
+    font-size: 2.1em;
+}
+
+.header-bg{
+
+    background: #ff5253;
+    padding: 13px 0;
+}
+
+.login-header{
+
+    font-family: verdana;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    font-size: 23px;
+    padding-top: 5px;
+
+}
+
+
+.wrapper{
+    margin-left: 10px;
+    margin-top: 20px;
+    overflow: visible;
+}
+
+.image-pos{
+    margin-left: -14px;
+    margin-top: -6px;
+
+}
+.text-pos{
+    margin-left: 10px;
+    text-transform: capitalize;
+    line-height: 0.8em;
+    color: #999999;
+}
+
+.new-post-pos{
+    margin-top: -73px;
+    margin-right: 4px;
+}
+
+.h6-size{
+    font-size: 10px;
+    margin-top: -25px;
+    color: #fd5e5e;
+}
+
+.greetings-bg{
+    background: #eee;
+    margin-top: 6px;
+    margin-bottom: -500px;
+    height: 100px;
+    box-shadow: 0px 9px 8px -7.5px rgba(0, 0, 0, 0.43);
+}
+
+#blood-type{
+    position: absolute;
+    background: #ff5252;
+    padding:4px 20px 4px 20px;
+    width: 61px;
+    font-size: 12.7px;
+    text-align: center;
+
+}
+
+.blood-type-pos{
+       margin: -13px 6.9px 0 -10px;
+}
+
+.country-size{
+    text-transform: capitalize;
+    font-size: 10px;
+    color: #9f9f9f;
+    margin-left: 10px;
+}
+
+.request-header{
+    margin-top: 510px;
+    color: #999999;
+    margin-bottom: 24%;
+}
+
+.requests{
+    font-weight: bold;
+    font-size: 14.3px;
+}
+
+.text-center{
+    margin-top: 170px;
+
+}
+
+.modal-header{
+    background: #ff5252;
+}
+
+#header-title{
+    color:white;
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.select-font-size{
+    font-size: 3px;
+}
+
+#date{
+    font-size: 13px;
+    font-family: Tahoma;
+}
+
+.request-bg{
+    background: #eeeeee;
+    margin-bottom: 5px;
+}
+
+.img-position{
+    margin-top: 25px;
+    margin-left: 5px;  
+}
+
+#request-blood-type{
+    position: absolute;
+    background: #ff5252;
+    padding:20px 20px 20px 20px;
+    width: 61px;
+    font-size: 12.7px;
+    margin-left: -50px;
+}
+
+.request-details{
+    margin-top: 15px;
+}
+
+.request-details-name{
+    font-family: verdana;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#request-name{
+    margin-left: -15px;
+    margin-top: 35px;
+}    
+
+.idn{
+    max-width: 1000px;
+    text-align: justify;
+    font-weight: normal;
+    margin:20px -58px;
+    text-transform: initial;
+}
+
+.posted-time{
+    text-transform: none;
+    font-size: 9px;
+    font-family: tahoma;
+    font-weight: normal;
+}
+
+#requestsArea{
+    margin-bottom: 50px;
+}
+
+span.badge.badge-padding {
+    float: right !important;
+    padding: 5px 14px 5px 14px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background: #337ab7;
+    position: absolute;
+}
+
+span.badge.badge-padding1 {
+    padding: 5px 14px 5px 14px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background: #337ab7;
+}
+
+.badge-pos {
+    margin-top: -40px;
+    margin-left: 20px;
+}
+
+.message-pos1{
+    margin-right: -15px;
+}
+
+.error-pos {
+    padding-top: 100px;
+    text-align: center;
+}
+
+p.posters-name {
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.media-body.media-visible {
+    overflow: visible;
+}

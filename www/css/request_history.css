@@ -1,0 +1,75 @@
+.h4-members{
+	font-family: arial rounded mt;
+    color: gray;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.request_history_bg {
+    background: #eee;
+    margin-bottom: 8px;
+    padding: 15px 0 15px;
+    border-radius: 7px;
+}
+
+.patients_name_padding {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-family: verdana;
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+}
+
+div#request_list {
+    margin-bottom: 100px;
+    margin-top: -6px;
+}
+
+.request_history_details{
+	text-align: justify;
+}
+
+.request_note {
+    text-transform: initial;
+    font-family: arial;
+    color: gray;
+    margin-top: -10px;
+}
+
+label.label.label-danger.request_blood_type_note.pull-left {
+    padding: 10px;
+}
+
+.divider-line {
+    border: 1px solid #e0e0e0;
+    margin-top: 16px;
+}
+
+hr.request-divider {
+    border: 1px solid #e0e0e0;
+    margin-top: 13px;
+    border-radius: 96px;
+}
+
+span.fa.fa-trash.fa-2x.trash-bg {
+    border-bottom: 3px solid #d9534f;
+    color: #d9534f;
+    margin: -3px 0;
+}
+
+.btn-delete {
+    margin: 20px 0;
+    margin-bottom: 30px;
+}
+
+.error-pos {
+    padding-top: 100px;
+    text-align: center;
+    color: #999999;
+}
+
+button#btn-clear {
+    margin-bottom: -23px;
+}

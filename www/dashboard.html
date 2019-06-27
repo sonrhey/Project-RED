@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrPdIMWf1_tjWdYG1-OifL3dzkDvoJakU&libraries=places"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+     <link rel="stylesheet" type="text/css" href="css/dashboard-1.css" />
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title> Project RED</title>
+    <script src="js/dashboard.js"></script>
+</head>
+<body class="body" >
+     
+
+
+ <div class="loader1" id="loader"></div>
+  <center><p class="loading-convo btn-block" id="loader2">Loading Content...</p></center>
+  <center><p class="loading-convo btn-block" id="loader4">Publishing request...</p></center>
+  <center><p class="loading-convo btn-block" id="loader3">Redirecting...</p></center>
+ <div class="header-bg header-bg1" id="top">
+    <div class="container">
+        <div class="media message-count-pos">
+            <a href="#main" class="scroll-smooth" id="backToTop"><img src="images/logo-small.png" id="imgup"/></a>
+            <!-- <img src="images/message-icon.png" class="pull-right message-pos1" id="message">
+            </div> -->
+            <div class="wrapper1-burg pull-right message-pos1">
+            <button type="button" class=" navbar-toggle" id="toggle-butt">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-2x"></i>
+            </button>
+            </div>
+
+            <!--navbar collapse-->
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right colls">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="profile.html"><i class="fa fa-user fa-2x"></i>&nbsp; Profile</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="inbox.html"><i class="fa fa-inbox fa-2x"></i>&nbsp; Inbox
+                        <!-- <span class="badge pull-right badge-pad">12</span> --></a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="request_history.html"><i class="fa fa-history fa-2x"></i>&nbsp; History</a>
+                    </li>
+                    <hr class="divider-line1">
+                    <li>
+                        <a class="page-scroll" href="notifications.html"><i class="fa fa-bell-o fa-2x"></i>&nbsp; Notifications
+                        <!-- <span class="badge pull-right badge-pad1">12</span> --></a>
+                    </li>
+                    <hr class="divider-line1">
+                     <li id="logout">
+                        <a class="page-scroll"><i class="fa fa-power-off fa-2x"></i>&nbsp; Logout
+                    </li>
+                    <hr class="divider-line1">
+                </ul>
+            </div>
+
+            <!--end navbar collapse-->
+        </div><!--end media-->
+    </div><!--end header container-->
+ </div><!--end header bg-->
+
+ <div class="whole-div">
+ <div id="main">
+ </div>
+ <div class="greetings-bg">
+ <div class="container">
+    <div class="wrapper">
+          <div class="media-right move-left-img">
+            <img src="images/samp-image1.png"/ width="70"  height= "75" class="image-pos" id="user_profiles" onerror="this.onerror=null;this.src='images/samp-image1.png';">
+            <div class="blood-type-pos">
+            <span class="label label-danger" id ="blood-type"></span>
+            </div>
+          </div><!--end first col-xs-->
+       
+          <div class="media-body media-visible" >
+        
+              <h5 class="hello-greeting text-pos">Hello, </h5>
+              <h4 class="move-left-img text-pos" ><b id="greetings"></b><b>!</b></h4>
+              <h6 class="country-size"><i id="region"> </i><i>,</i><i id="country"> </i></h6>
+              <div class="icon-post">
+              <img src="images/new-post-icon.png" class="pull-right new-post-pos" id="newPost">
+              <h6 class="pull-right h6-size">New Request</h6>
+              </div>
+          </div><!--end second col-xs-->
+    </div><!--end wrapper-->
+  </div><!--end container-->
+  </div><!--end greeting bg-->
+  <div class="container">
+      <div class="request-header">
+      <h4 class="requests">Requests</h4>
+      <div class="requestsArea" id="requestsArea">
+       
+      </div>
+      </div>
+  </div>
+
+<audio id="my_audio" src="audio/notif.wav"></audio>
+<audio id="my_audio1" src="audio/message_alert.wav"></audio>
+</div>
+
+<!--footer-->
+ <div class="footer-nav" id="footer-nav">
+ <div class="header-bg navbar-fixed-bottom ">
+    <div class="container ">
+                <div class="row" >
+                    <div class="col-xs-3 profile">
+                        <a href="dashboard.html"><img src="images/home-icon.png" class="center-block"/ ></a>
+                    </div><!--end first col-->
+                    <div class="col-xs-3 list">
+                        <a href="inbox.html"><img src="images/messages-icon.png" class="center-block"/><div id ="badge-id1" class="badge-pos1"></div></a>
+
+                    </div><!--end first col-->
+                    <div class="col-xs-3 history">
+                        <a href="request_history.html"><img src="images/history-icon.png" class="center-block"/></a>
+                    </div><!--end first col-->
+                    <div class="col-xs-3 bell">
+                        <a href="notifications.html" id="notif"><img src="images/bell-icon.png" class="center-block"/><div id ="badge-id" class="badge-pos "></div></a>
+                    </div><!--end first col-->
+                </div><!--end row-->
+    </div><!--end header container-->
+ </div><!--end header bg-->
+ </div>
+
+ <!--new post modal window-->
+   <div class="modal fade" id="myModal" role="dialog">
+                             <div class="modal-dialog">
+              <!-- Modal content-->
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal"><span class="close-button" id="close-modal">&times;</span></button>
+                                  <h4 class="modal-title" id="header-title">New Post</h4>
+                                </div>
+                                <div class="modal-body">
+                               <div class="form-group error" id="form-group-1">
+                                    <label for="username" class="form-labels">Patients Name:</label>
+                                    <div class="input-group ">
+                                        <span class="input-group-addon"><img src="images/username-icon.png" height="32" alt="Username icon"/></span>
+                                        <input type="text" class="form-control input-lg"  name="name" placeholder="Enter name" id="patients_name">
+                                    </div>
+                                </div><!--form group 1 -->
+                                <div class="form-group">
+                                <div class="row inputs-font">   
+                                    <div class="col-xs-6">   
+                                        <label for="password" class="form-labels">Age:</label>
+                                        <select class="form-control input-lg age select-font-size" id="age">
+                                        <option selected="true" disabled="disabled" >Select Age</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-6">
+                                          <label for="password" class="form-labels">Gender:</label>
+                                          <select class="form-control input-lg select-font-size" id="gender">
+                                          <option selected="true" disabled="disabled" >Select Gender</option>
+                                          <option value ="male">Male</option>
+                                          <option value="female">Female</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                </div><!--end form group 2-->
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                    <div class="col-xs-4">
+                                    <label for="bloodtype" class="form-labels">Blood Type:</label>
+                                        <select class="form-control input-lg center-block" id="bloodType1">
+                                            <option selected="true" disabled="disabled" >Blood Type</option>
+                                            <option value= "O+"> O+</option>
+                                            <option value= "O-"> O-</option>
+                                            <option value= "A+"> A+</option>
+                                            <option value= "A-"> A-</option>
+                                            <option value= "B+"> B+</option>
+                                            <option value= "B-"> B-</option>
+                                            <option value= "AB+"> AB+</option>
+                                            <option value= "AB-"> AB-</option>
+                                            <option value= " - "> Any</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <label for="bloodtype" class="form-labels">City / Municipality:</label>
+                                        <select class="form-control input-lg center-block" id="regions">
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div><!--end form group 3-->
+                                <div class="form-group">
+                                    <label for="date" class="form-labels">Hospital Name:</label>
+                                        <div class="form-group">
+                                        <!-- <input type='text' id ="hospital_name" class="form-control input-lg" placeholder="Enter hospital name"></input> -->
+                                        <select class="form-control input-lg center-block" id="hospital_name">
+                                            <option selected="true" disabled="disabled" >Select Hospital</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="hide-this">Please specify:<input type="text" id="hospital_name" class="form-control input-lg otherOpt"></div>
+                                </div>
+                                <div class="form-group">
+                                     <label for="password" class="form-labels">Description:</label>
+                                     <textarea class="form-control" rows="4" id="note" placeholder="Enter description" ></textarea>
+                                </div>
+                                <div class="form-group">
+                                   <!-- <input type="file" id="user_image" style="display: none;"> -->
+                                   <!-- <img src="" class="img-thumbnail" id="user_profile" style="display: none;"> -->
+                                   <button type="button" id="btn-upload" class="btn btn-success">Upload Picture</button>
+                                   <br>
+                                   <img src="images/donate-blood.jpg" class="img-thumbnail" id="user_profile" style="display: none;" />
+                                </div>
+                                <div class="modal-footer">
+                                     <button type="button" class="btn btn-primary btn-lg btn-block" id="newPost1">Post</button> 
+                                </div>
+                                </div><!--end modal-->
+              
+                             </div>
+                        </div><!--end modal-->
+
+                        </div>
+                        
+                        <div class="modal fade" id="myModal5" role="dialog">
+                          <div class="modal-dialog med center-block">
+                            <div class="modal-content">
+                              <div class="modal-header header-padding">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h5 class="modal-title choose-source">Choose Source</h5>
+                              </div>
+                              <div class="modal-body opts-chose">
+                                <div id="camera-opt"><i class="fa fa-camera fa-3x fa-cam-color"></i> <p class="camera">Camera</p></div>
+                                <hr>
+                                <div id="gallery-opt"><i class="fa fa-picture-o fa-3x fa-cam-color"></i> <p class="gallery">Gallery</p></div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                       
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="cordova.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

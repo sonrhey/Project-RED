@@ -1,0 +1,82 @@
+h4.donation_count_label {
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+}
+
+div#donation_count {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    background: #fb6565;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    color: white;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.btn-full {
+    margin-top: 20px;
+    padding: 10px;
+    /* font-size: 12px; */
+}
+
+.container.pad-bot {
+    margin-bottom: 200px;
+}
+
+.donation_detailed_list {
+    display: none;
+    background: rgba(52, 23, 142, 0.09);
+    padding: 20px;
+    border-radius: 13px;
+}
+
+.show{
+	display: block;
+}
+
+h5.receiver-name{
+    margin-left: 12px;
+    color: #545454;
+    text-transform: capitalize;
+}
+
+i.fa.fa-check.pull-right.icon-check {
+    font-size: 30px;
+    margin-top: -10px;
+    color: #4482ce;
+}
+
+h4.title {
+    color: gray;
+    font-weight: bold;
+    text-transform: none;
+}
+
+hr.titles {
+    border: 1px solid #888888;
+}
+
+hr.name-divider {
+    color: #888888;
+    border-top: 1px solid;
+}
+
+.media.media-position {
+    margin-left: -15px;
+    overflow: visible;
+}
+
+img.img-position1 {
+    margin-top: -10px;
+}
+
+h4.error-message-don {
+    text-transform: none;
+    color: gray;
+}
+
